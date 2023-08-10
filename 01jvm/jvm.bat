@@ -13,15 +13,15 @@ call java -version
 set /P choose=请输入版本:
 IF "%choose%" EQU "8" (
     REM 修改JAVA_HOME环境变量为%JAVA_HOME_8%,
-    sudo setx "JAVA_HOME" "%%JAVA_HOME_8%%/bin" /m
-    echo 已经修改 "JAVA_HOME" 为 %%JAVA_HOME_8%%/bin
+    sudo setx "JAVA_HOME" "%%JAVA_HOME_8%%" /m
+    echo 已经修改 "JAVA_HOME" 为 %%JAVA_HOME_8%%
 ) ELSE IF "%choose%" EQU "17" (
-    sudo setx "JAVA_HOME" "%%JAVA_HOME_17%%/bin" /m
-    echo 已经修改 "JAVA_HOME" 为 %%JAVA_HOME_17%%/bin
+    sudo setx "JAVA_HOME" "%%JAVA_HOME_17%%" /m
+    echo 已经修改 "JAVA_HOME" 为 %%JAVA_HOME_17%%
 REM setx "Path" "%cd%;%path%" /m
 ) ELSE IF "%choose%" EQU "20" (
-    sudo setx "JAVA_HOME" "%%JAVA_HOME_20%%/bin" /m
-    echo 已经修改 "JAVA_HOME" 为 %%JAVA_HOME_20%%/bin
+    sudo setx "JAVA_HOME" "%%JAVA_HOME_20%%" /m
+    echo 已经修改 "JAVA_HOME" 为 %%JAVA_HOME_20%%
 ) ELSE (
     echo 已取消
 )
