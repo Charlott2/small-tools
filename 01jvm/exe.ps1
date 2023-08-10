@@ -15,6 +15,7 @@ Write-Host @"
 当前 Java 版本：
 "@
 java -version
+# !!! 根据需要在下方添加更多的版本选项
 Write-Host @"
 --------------------------------------------------
 输入要使用的 Java 版本对应的选项:
@@ -29,6 +30,15 @@ Write-Host @"
 # 展示选项，用户选择
 $opt = Read-Host "选项"
 switch ($opt) {
+    # !!! 根据需要在下方添加更多的版本选项
+    # 每个 switch 选项的格式如下：
+    # "版本号" {
+    #    # 本句的含义是将系统环境变量 JAVA_HOME 的值修改为 %JAVA_HOME_版本号%
+    #    # 因此需要为对应版本的 JDK 设置名为 %JAVA_HOME_版本号%，值为该版本 JDK 安装路径的系统环境变量
+    #    [System.Environment]::SetEnvironmentVariable("JAVA_HOME", "%JAVA_HOME_版本号%", "Machine")
+    #    # 输出提示信息
+    #    Write-Host "已切换为 JDK 8"
+    # }
     "8" {
         # 修改系统环境变量
         [System.Environment]::SetEnvironmentVariable("JAVA_HOME", "%JAVA_HOME_8%", "Machine")
