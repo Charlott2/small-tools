@@ -10,11 +10,10 @@ Some small tools.
 
 Windows 平台下用于切换 Java 版本的小脚本，前置要求如下：
 
-1. 下载安装 JDK 并配置好对应版本的 **系统** 环境变量，如：JDK17 对应的变量名为 **JAVA_HOME_17**，值为其安装路径。环境变量配置的具体方法百度可查，不再赘述。
-   ![Examples](images/01jvm-examples.png)
-2. 根据需要修改 `01jvm/exe.ps1` 中提供的版本选项（默认提供 JDK8、JDK17、JDK20 三个选项）
-3. 以管理员权限运行，重新打开 Shell/软件
-4. 完毕！
+1. 下载安装几个你喜欢的 JDK 版本至指定路径（默认为 C:\DevelopmentKit\Java\jdk-x），其中，x 为 JDK 版本，如 JDK 20 对应 jdk-20。也可以通过修改[脚本](01jvm/exe.ps1)中的基本路径 $BASIC_PATH 指定你喜欢的路径。
+2. 根据需要修改脚本中提供的版本选项（默认提供 JDK8、JDK17、JDK20 三个选项），需修改两处（展示与确定安装路径两处）
+3. 以管理员权限运行脚本，重新打开 Shell 并测试命令 `java -version`。
+4. Enjoy! 💐
 
 ## TODO: 02 acl (Auto Campus Life)
 
