@@ -4,7 +4,7 @@
 #       注意：请根据实际情况修改脚本中的基础路径 $BASIC_PATH，
 #       或将 JDK 安装在指定的路径（C:\DevelopmentKit\Java\jdk-x）下，
 #       其中，x 为 JDK 版本，如 JDK 20 对应 jdk-20。
-# date: 2023-08-21
+# date: 2023-09-06
 
 # 判断有无管理员权限，如果没有，提示并退出
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
@@ -26,9 +26,8 @@ Write-Host @"
 --------------------------------------------------
 输入要使用的 Java 版本对应的选项:
 选项	    含义
-8		    切换环境为 JDK 8
-17		    切换环境为 JDK 17
-20		    切换环境为 JDK 20
+8		    切换环境为 JDK 8 LTS
+17		    切换环境为 JDK 17 LTS
 其他	    取消
 --------------------------------------------------
 "@
@@ -36,18 +35,14 @@ Write-Host @"
 #  !!!可修改!!! 根据用户选择，确定 JDK 安装路径
 $opt = Read-Host "选项"
 if ($opt -eq "8") {
-    $path = $BASIC_PATH + "1.8"
+    $path = $BASIC_PATH + "8.0.382.5-hotspot"
 }
 # 样例：
 # elseif ($opt -eq "11") {
-#     # 此处的 "11" 可以用 $opt 替换，具体取决于你的 JDK 安装路径
-#     $path = $BASIC_PATH + "11"
+#     $path = $BASIC_PATH + "xxx-hostpot"
 # }
 elseif ($opt -eq "17") {
-    $path = $BASIC_PATH + $opt
-}
-elseif ($opt -eq "20") {
-    $path = $BASIC_PATH + $opt
+    $path = $BASIC_PATH + "17.0.8.101-hotspot"
 }
 else {
     Write-Host "已取消"
