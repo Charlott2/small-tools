@@ -1,8 +1,10 @@
-# 真正执行脚本
-$grandpaPath = Split-Path -Parent $PSScriptRoot
+# 这是代理脚本，在下方执行真正的脚本
+$TOOLS_PATH = Split-Path -Parent $PSScriptRoot
 
-Set-Location ($grandpaPath + "\02acl\auto-campus-login\")
-py.exe exe.py
-
-Set-Location ($grandpaPath + "\02acl\email-ip\")
+Set-Location ($TOOLS_PATH + "\02acl\login-campus\")
 pwsh.exe exe.ps1
+
+Set-Location ($TOOLS_PATH + "\02acl\email-ip\")
+pwsh.exe exe.ps1
+
+Set-Location ($TOOLS_PATH + "\bin")
