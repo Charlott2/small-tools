@@ -4,13 +4,13 @@ $IP_LIKE = '10.103.*'
 # 函数
 function Send-Email {
     param (
-        $From = "waoap@stu.cqut.edu.cn",
-        $To = "shabbyacc@qq.com",
+        $From = "xxx",
+        $To = "xxx",
         $Subject = "IP Address Changed",
         [Parameter(Mandatory = $true)]$Body,
         $SMTPServer = "smtp.exmail.qq.com",
         $SMTPPort = "587",
-        $Pass = '9IjxedxSpC4eB8Yaz7Lq'
+        $Pass = 'xxx'
     )
     $SMTPMessage = New-Object System.Net.Mail.MailMessage($From, $To, $Subject, $Body)
     $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, $SMTPPort)
