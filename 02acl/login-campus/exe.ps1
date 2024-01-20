@@ -28,4 +28,5 @@ $BODY = @{
 
 $Response = Invoke-WebRequest -Uri $URI -Method 'POST' -Headers $HEADERS -Body $BODY
 $DateNow = Get-Date -Format 'yyyyMMddHHmmss'
+Remove-Item -Path ('log-' + $DateNow + '.json') -Force -ErrorAction SilentlyContinue
 Out-File -FilePath ('log-' + $DateNow + '.json') -InputObject $Response.Content -Encoding utf8

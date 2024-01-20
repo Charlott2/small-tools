@@ -34,15 +34,12 @@ Write-Host @"
 
 #  !!!可修改!!! 根据用户选择，确定 JDK 安装路径
 $opt = Read-Host "选项"
-if ($opt -eq "8") {
-    $path = $BASIC_PATH + "8.0.382.5-hotspot"
-}
 # 样例：
-# elseif ($opt -eq "11") {
-#     $path = $BASIC_PATH + "xxx-hostpot"
+# if ($opt -eq "11") {
+#     $path = $BASIC_PATH + $opt
 # }
-elseif ($opt -eq "17") {
-    $path = $BASIC_PATH + "17.0.8.101-hotspot"
+if ($opt -eq "8" -or $opt -eq "17") {
+    $path = $BASIC_PATH + $opt
 }
 else {
     Write-Host "已取消"
