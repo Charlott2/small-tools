@@ -3,6 +3,10 @@ function Read-Config {
     param (
         [Parameter(Mandatory = $true)]$Path
     )
+    if (-not (Test-Path -Path $Path)) {
+        Write-Host 'Config file not found.'
+        exit
+    }
     $raw = Get-Content -Path $Path
     if ($raw.Length -ne 10) {
         Write-Host 'Config file syntax error.'
@@ -56,5 +60,8 @@ if ((Get-ChildItem -Path 'log' | Measure-Object).Count -ge 10) {
 
 # 获取当前时间
 $now = Get-Date -Format 'yyyyMMddHHmmss'
-# 输出结果
+# 输出日志
+if (-not (Test-Path -Path 'log')) {
+    New-Item -Path 'log' -ItemType 'directory'
+}
 Out-File -FilePath ('log\log-' + $now + '.json') -InputObject $response.Content -Encoding utf8

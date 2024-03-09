@@ -22,6 +22,10 @@ function Read-Config {
     param (
         [Parameter(Mandatory = $true)]$Path
     )
+    if (-not (Test-Path -Path $Path)) {
+        Write-Host 'Config file not found.'
+        exit
+    }
     $raw = Get-Content -Path $Path
     if ($raw.Length -ne 6) {
         Write-Host 'Config file syntax error.'
