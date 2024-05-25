@@ -1,7 +1,7 @@
 # ACL, Atuo Campus Life
-# Author: SeagullOddy
+# Author: Charlott2
 # Update: 2024/03/09
-# GitHub: https://github.com/SeagullOddy/small-tools
+# GitHub: https://github.com/Charlott2/small-tools
 
 # 这是代理脚本，下方执行的是真正的工作脚本
 $TOOLS_PATH = $PSScriptRoot
