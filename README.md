@@ -4,8 +4,8 @@
    <h1>小工具</h1>
    <h4>一些自动化小工具。</h4>
    <p>
-      <a href="stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/SeagullOddy/small-tools?style=flat"/></a>
-      <a href="LICENSE"><img alt="GitHub Repo stars" src="https://img.shields.io/github/license/SeagullOddy/small-tools"/></a>
+      <a href="stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Charlott2/small-tools?style=flat"/></a>
+      <a href="LICENSE"><img alt="GitHub Repo stars" src="https://img.shields.io/github/license/Charlott2/small-tools"/></a>
    </p>
    <p>
       <a href="#注意">注意</a> •
