@@ -4,7 +4,7 @@
    <h1>小工具</h1>
    <h4>一些自动化小工具。</h4>
    <p>
-      <a href="stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Charlott2/small-tools?style=flat"/></a>
+      <a href="/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Charlott2/small-tools?style=flat"/></a>
       <a href="LICENSE"><img alt="GitHub Repo stars" src="https://img.shields.io/github/license/Charlott2/small-tools"/></a>
    </p>
    <p>
@@ -60,6 +60,6 @@ Windows 平台下基于任务计划程序实现的开机自动登陆校园网工
 
 ## 许可
 
-[MIT](LICENSE).
+[MIT](LICENSE)。
 
 <p align="right">（<a href="#readme-top">返回顶部</a>）</p>
